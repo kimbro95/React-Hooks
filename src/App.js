@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
 
-function App() {
+// 함수형 컴포넌트
+const App = () => {
+  const [item, setItem] = useState(1);
+  const plus = () => setItem(item + 1);
+  const minus = () => setItem(item - 1);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello CodeSandbox {item}</h1>
+      <h2>Start editing to see some magic happen!</h2>
+      <button onClick={plus}>+</button>
+      <button onClick={minus}>-</button>
     </div>
   );
+}
+
+// 클래스형 컴포넌트
+class ClassApp extends React.Component {
+  state = {
+    item: 1
+  }
+  render() {
+    const { item } = this.state;
+    return (
+      <div className="App">
+        <h1>Hello CodeSandbox Class {item}</h1>
+        <h2>Start editing to see some magic happen!</h2>
+        <button onClick={this.plus}>+</button>
+        <button onClick={this.minus}>-</button>
+      </div>
+    )
+  }
+  plus = () => {
+    this.setState(state => {
+      return {
+        item: state.item + 1
+      }
+    })
+  }
+
+  minus = () => {
+    this.setState(state => {
+      return {
+        item: state.item - 1
+      }
+    })
+  }
 }
 
 export default App;
