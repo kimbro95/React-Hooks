@@ -3,3 +3,21 @@
 ####################################
 -useState
 클래스형 컴포넌트에서 함수형 컴포넌트를 사용하며 useState를 사용하면 코드의 길이를 단축시킬 수 있다.
+
+
+
+####################
+### 1.1 useInput ###
+####################
+html 태그 속성에 객체를 unpack 할 수 있다
+ex) const name = useInput("KimBro");
+    <input
+        value={name.value}
+        onchange={name.onchange}
+    />
+    
+    ↓↓↓↓↓↓↓↓↓↓↓
+    
+    <input
+        {...name}
+    />
