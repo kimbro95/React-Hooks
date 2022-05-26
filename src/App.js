@@ -1,35 +1,37 @@
 import React, { useState } from "react";
 
-const useInput = (initialValue, validator) => {
-  const [value, setValue] = useState(initialValue);
-  const onChange = (e) => {
-    const {
-      target: { value }
-    } = e;
-
-    let willUpdate = true;
-    if (typeof validator === "function") {
-      willUpdate = validator(value);
-    }
-    if (willUpdate) setValue(value);
+const content = [
+  {
+    tab: "Section 1",
+    content: "Content of the Section 1"
+  },
+  {
+    tab: "Section 2",
+    content: "Content of the Section 2"
   }
-  return { value, onChange };
-}
+];
 
-// 함수형 컴포넌트
+const useTabs = (initialTab, allTabs) => {
+  const [index, setIndex] = useState(initialTab);
+  if (!allTabs || !Array.isArray(allTabs)) return;
+  return {
+    item: allTabs[index],
+    changeItem: setIndex
+  };
+};
+
 const App = () => {
-  const maxLength = (value) => value.length <= 10;
-  //const maxLength = (value) => !value.includes("@");
-  const name = useInput("KimBro", maxLength);
+  // const tab = useTabs(0, content);
+  const { item, changeItem } = useTabs(0, content);
+
   return (
     <div className="App">
-      <h1>Hello</h1>
-      <input
-        placeholder="Name"
-        //value={name.value}
-        //onChange={name.onChange}
-        {...name}
-      />
+      {content.map((section, idx) => (
+        <button key={idx} onClick={() => changeItem(idx)}>{section.tab}</button>
+      ))}
+      <div>
+        {item.content}
+      </div>
     </div>
   );
 }
