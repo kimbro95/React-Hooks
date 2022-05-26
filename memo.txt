@@ -21,3 +21,22 @@ ex) const name = useInput("KimBro");
     <input
         {...name}
     />
+
+
+
+#####################################
+### 2.0 Introduction to useEffect ###
+#####################################
+-useEffect
+useEffect는 ComponentDidMount(), ComponentWillUnMount(), ComponentDidUpdate()의 역할을 한다.
+ex)
+const hello = () => console.log("hello !!!");
+1. component가 mount되었을 때만 hello 함수를 동작 시키려면 빈 dependency를 전달하면된다.
+useEffect(() => {
+    hello();
+}, []);
+
+2. component가 mount될 때 와 number에 변화가 있을 때 hello 함수를 동작 시킨다.
+useEffect(() => {
+    hello();
+}, [number]);
