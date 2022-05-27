@@ -40,3 +40,32 @@ useEffect(() => {
 useEffect(() => {
     hello();
 }, [number]);
+
+
+
+####################
+### 2.2 useClick ###
+####################
+-useRef
+getElementById()를 하는것과 같다.
+
+-useEffect return
+useEffect에서 ⭐return⭐은 ComponentWillUnMount시 동작해야할 동작을 전달하면된다.
+ex)
+const useClick = (onClick) => {
+  const element = useRef();
+  useEffect(() => {
+    // ComponentDidMount시 동작 dependency가 [] 때문에 ComponentDidMount 일 때만 동작.
+    if (typeof onClick !== "function") return;
+    if (element.current) {
+      element.current.addEventListener("click", onClick);
+    }
+    // return은 ComponentWillUnMount 일 때만 동작.
+    ⭐return⭐ () => {  
+      if (element.current) {
+        element.current.removeEventListener("click", onClick);
+      }
+    };
+  }, []);
+  return element;
+};
