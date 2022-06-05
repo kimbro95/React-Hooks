@@ -1,60 +1,68 @@
+import { isElementType } from "@testing-library/user-event/dist/utils";
 import React, { useEffect, useRef, useState } from "react";
 
-// useFadeIn
-// const useFadeIn = (duration = 1, delay = 0) => {
-//   const element = useRef();
+// useScroll 
+// const useScroll  = () => {
+//   const [state, setState ] = useState({
+//     x: 0,
+//     y: 0
+//   });
+//   const onScroll = () => {
+//     setState({
+//       y: window.pageYOffset,
+//       x: window.pageYOffset
+//     });
+//   }
 //   useEffect(() => {
-//     if (typeof duration !== "number" || typeof delay !== "number") return;
-//     if (element.current) {
-//       const { current } = element;
-//       current.style.transition = `opacity ${duration}s ease-in-out ${delay}s`;
-//       current.style.opacity = 1;
-//     }
+//     window.addEventListener("scroll", onScroll);
+//     return () => window.removeEventListener("scroll", onScroll);
 //   }, [])
-//   return { ref: element, style: { opacity: 0 } };
+//   return state;
 // }
 
 // const App = () => {
-//   const fadeInH1 = useFadeIn(1, 2);
-//   const fadeInP = useFadeIn(3, 5);
+//   const { y } = useScroll();
+
 //   return (
-//     <div className="App">
-//       <h1 {...fadeInH1}>Hi</h1>
-//       <p {...fadeInP}>P tag</p>
+//     <div className="App" style={{ height: "1000vh"}}>
+//       <h1 style={{position: "fixed", color : y > 100 ? "red" : "blue"}}>hi</h1>
 //     </div>
 //   );
 // };
 
-
-// useNetwork
-const useNetwork = (onChange) => {
-  const [status, setStatus] = useState(navigator.onLine);
-  const handleChange = () => {
-    if (typeof onChange === "function") {
-      onChange(navigator.onLine);
+// useFullscreen
+const useFullscreen = (callback) => {
+  const element = useRef();
+  const triggerFull = () => {
+    if(element.current){
+      element.current.requestFullscreen();
+      if(callback && typeof callback === "function"){
+        callback(true);
+      }
     }
-    setStatus(navigator.onLine);
-  };
-
-  useEffect(() => {
-    window.addEventListener("online", handleChange);
-    window.addEventListener("offline", handleChange);
-    return () => {
-      window.removeEventListener("online", handleChange);
-      window.removeEventListener("offline", handleChange);
+  }
+  const exitFull = () => {
+    document.exitFullscreen();
+    if(callback && typeof callback === "function"){
+      callback(false);
     }
-  }, []);
-  return status;
+  }
+  return {element, triggerFull, exitFull};
 }
 
 const App = () => {
-  const handleNewtworkChange = (online) => {
-    console.log(online ? "Online" : "Offline")
-  };
-  const onLine = useNetwork(handleNewtworkChange);
+  const onFull = (isFull) => {
+    console.log(isFull ? "Full" : "Not Full");
+  }
+  const {element, triggerFull, exitFull} = useFullscreen(onFull);
+
   return (
     <div className="App">
-      <h1>{onLine ? "Online" : "Offline"}</h1>
+      <div ref={element}>
+        <img src="https://i.ibb.co/R6RwNxx/grape.jpg" alt="grape" width="250" />
+        <button onClick={triggerFull}>Full Screen</button>
+        <button onClick={exitFull}>Exit Screen</button>
+      </div>
     </div>
   );
 };
