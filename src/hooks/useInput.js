@@ -4,7 +4,7 @@ export const useInput = (initialValue, validator) => {
     const [value, setValue] = useState(initialValue);
     const onChange = (e) => {
         //const value = event.target.value
-        //À§ ÄÚµå¸¦ ES6 syntax¸¦ »ç¿ëÇÑ ¹æ¹ý
+        //ìœ„ ì½”ë“œë¥¼ ES6 syntaxë¥¼ ì‚¬ìš©í•œ ë°©ë²•
         const {
             target: { value }
         } = e;

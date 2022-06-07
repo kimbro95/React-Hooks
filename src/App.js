@@ -1,31 +1,14 @@
 import React from "react";
+import { useAxios } from "./hooks/useAxios";
 
-// useNotification
-const useNotification = (title, options) => {
-  if(!("Notification" in window)){
-    return;
-  }
-  const fireNotif = () => {
-    if(Notification.permission !== "granted"){
-      Notification.requestPermission().then(permission => {
-        if(permission === "granted"){
-          new Notification(title, options);
-        } else {
-          return;
-        }
-      });
-    } else {
-      new Notification(title, options);
-    }
-  }
-  return fireNotif;
-};
-
+// useAxios
 const App = () => {
-  const triggerNotifi = useNotification("Hello", {body : "this is body"});
+  const { loading, data, refetch } = useAxios({url : "https://yts.mx/api/v2/list_movies.json"});
   return (
     <div className="App">
-      <button onClick={triggerNotifi}>Hi</button>
+      <h1>{data && data.status}</h1>
+      <h2>{loading && "Loading..."}</h2>
+      <button onClick={refetch}>Refetch</button>
     </div>
   );
 };
