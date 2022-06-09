@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kimbro95/React-Hooks/hooks/useScroll.git"
+    "url": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/useScroll"
   },
   "keywords": [
     "react",
@@ -15,9 +15,9 @@
   "author": "kimbro95",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kimbro95/React-Hooks/hooks/useScroll/issues"
+    "url": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/useScroll/issues"
   },
-  "homepage": "https://github.com/kimbro95/React-Hooks/hooks/useScroll#readme",
+  "homepage": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/useScroll#readme",
   "peerDependencies": {
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
