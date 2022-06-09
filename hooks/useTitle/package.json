@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kimbro95/React-Hooks/hooks.git"
+    "url": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/useTitle"
   },
   "keywords": [
     "react",
@@ -15,9 +15,9 @@
   "author": "kimbro95",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kimbro95/React-Hooks/hooks/issues"
+    "url": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/useTitle/issues"
   },
-  "homepage": "https://github.com/kimbro95/React-Hooks/hooks#readme",
+  "homepage": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/useTitle#readme",
   "peerDependencies": {
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
