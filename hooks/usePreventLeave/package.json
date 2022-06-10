@@ -1,0 +1,28 @@
+{
+  "name": "@kimbro95-hooks/leave",
+  "version": "1.0.0",
+  "description": "React Hook to prompt the user for confirmation before leaving the page. Useful when changes haven't been saved.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/usePreventLeave"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "reforeunload",
+    "onleave",
+    "save",
+    "change"
+  ],
+  "author": "kimbro95",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/usePreventLeave/issues"
+  },
+  "homepage": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/usePreventLeave#readme",
+  "peerDependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  }
+}
