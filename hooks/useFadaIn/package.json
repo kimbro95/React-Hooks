@@ -1,0 +1,25 @@
+{
+  "name": "@bro95-hooks/use-fade-in",
+  "version": "1.0.0",
+  "description": "React Hook to fade in any element.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/useFadeIn"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "fadein"
+  ],
+  "author": "kimbro95",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/useFadeIn/issues"
+  },
+  "homepage": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/useFadeIn#readme",
+  "peerDependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  }
+}
