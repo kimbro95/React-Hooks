@@ -1,4 +1,4 @@
-# @kimbro95-hooks/use-scroll
+# @bro95-hooks/use-scroll
 
 📌React Hook to get X / Y coordinates of current position of the scroll.
 
@@ -6,13 +6,13 @@
 
 #### npm
 
-`npm i @kimbro95-hooks/use-scroll`
+`npm i @bro95-hooks/use-scroll`
 
 ## Usage
 
 ```js
 import React from "react";
-import useScroll from "@kimbro95-hooks/use-scroll";
+import useScroll from "@bro95-hooks/use-scroll";
 function App() {
   const { x, y } = useScroll();
   return (

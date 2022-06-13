@@ -1,4 +1,4 @@
-# @kimbro95-hooks/leave
+# @bro95-hooks/use-prevent-leave
 
 📌React Hook to prompt the user for confirmation before leaving the page. Useful when changes haven't been saved.
 
@@ -6,13 +6,13 @@
 
 #### npm
 
-`npm i @kimbro95-hooks/leave`
+`npm i @bro95-hooks/use-prevent-leave`
 
 ## Usage
 
 ```js
 import React from "react";
-import usePreventLeave from "@kimbro95-hooks/leave";
+import usePreventLeave from "@bro95-hooks/use-prevent-leave";
 
 function App() {
   const { enablePrevent, disablePrevent } = usePreventLeave();

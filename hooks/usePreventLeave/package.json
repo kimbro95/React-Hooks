@@ -1,5 +1,5 @@
 {
-  "name": "@kimbro95-hooks/leave",
+  "name": "@bro95-hooks/use-prevent-leave",
   "version": "1.0.0",
   "description": "React Hook to prompt the user for confirmation before leaving the page. Useful when changes haven't been saved.",
   "main": "index.js",

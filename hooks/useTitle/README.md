@@ -1,4 +1,4 @@
-# @kimbro95-hooks/use-title
+# @bro95-hooks/use-title
 
 📌React Hook to update your document's title.
 
@@ -6,13 +6,13 @@
 
 #### npm
 
-`npm i @kimbro95-hooks/use-title`
+`npm i @bro95-hooks/use-title`
 
 ## Usage
 
 ```js
 import React from "react";
-import useTitle from "@kimbro95-hooks/use-title";
+import useTitle from "@bro95-hooks/use-title";
 
 function App() {
   useTitle("Welcome");

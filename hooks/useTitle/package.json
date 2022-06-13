@@ -1,6 +1,6 @@
 {
-  "name": "@kimbro95-hooks/use-title",
-  "version": "1.0.1",
+  "name": "@bro95-hooks/use-title",
+  "version": "1.0.0",
   "description": "React Hook to update ur document's title",
   "main": "index.js",
   "repository": {

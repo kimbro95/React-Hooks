@@ -1,6 +1,6 @@
 {
-  "name": "@kimbro95-hooks/use-scroll",
-  "version": "1.0.1",
+  "name": "@bro95-hooks/use-scroll",
+  "version": "1.0.0",
   "description": "React Hook to get X / Y coordinates of current position of the scroll.",
   "main": "index.js",
   "repository": {
