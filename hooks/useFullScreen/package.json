@@ -1,0 +1,25 @@
+{
+  "name": "@bro95-hooks/use-fullscreen",
+  "version": "1.0.0",
+  "description": "React Hook to make any element go Fullscreen",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/useFullScreen"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "fullscreen"
+  ],
+  "author": "kimbro95",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/useFullScreen/issues"
+  },
+  "homepage": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/useFullScreen#readme",
+  "peerDependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  }
+}
