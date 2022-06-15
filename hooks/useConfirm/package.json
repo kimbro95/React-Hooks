@@ -1,0 +1,26 @@
+{
+  "name": "@bro95-hooks/use-confirm",
+  "version": "1.0.0",
+  "description": "React Hook to ask the user for a confirmation before executing a function.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/useConfirm"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "confirm",
+    "prompt"
+  ],
+  "author": "kimbro95",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/useConfirm/issues"
+  },
+  "homepage": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/useConfirm#readme",
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
