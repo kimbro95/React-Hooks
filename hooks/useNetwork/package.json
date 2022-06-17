@@ -1,0 +1,28 @@
+{
+  "name": "@bro95-hooks/use-network",
+  "version": "1.0.0",
+  "description": "React Hook to listen when the user goes online or offline.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/useNetwork"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "online",
+    "offline",
+    "network",
+    "status"
+  ],
+  "author": "kimbro95",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/useNetwork/issues"
+  },
+  "homepage": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/useNetwork#readme",
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
