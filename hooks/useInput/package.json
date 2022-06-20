@@ -1,0 +1,25 @@
+{
+  "name": "@bro95-hooks/use-input",
+  "version": "1.0.0",
+  "description": "React Hook to put the value in target",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/useInput"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "input"
+  ],
+  "author": "kimbro95",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/useInput/issues"
+  },
+  "homepage": "https://github.com/kimbro95/React-Hooks/tree/main/hooks/useInput#readme",
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
